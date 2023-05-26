@@ -43,4 +43,12 @@ public class CadastrarPessoaTest {
 		Assertions.assertEquals(pessoa.getNascimento().getMonthValue(), 01);
 		Assertions.assertEquals(pessoa.getNascimento().getDayOfMonth(), 25);
 	}
+	
+	//Teste de mock para o fluxo de exceçao do caso de uso, deve disparar uma exception por falha na API
+	@Test
+	void testCadastrarPessoaMasSistemaDosCorreiosForaDoAr() {
+		Mockito.when(apiDosCorreios.buscaDadosComBaseNoCep(anyString())).thenThrow(RuntimeException.class);
+		
+		Assertions.assertThrows(RuntimeException.class, () -> cadastrarPessoa.cadastrarPessoa("Jose", "123", LocalDate.now(),"1234123" ));
+	}
 }
