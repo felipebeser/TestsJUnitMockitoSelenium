@@ -16,9 +16,9 @@
     <dependencies>
         <!-- https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter-api -->
 		<dependency>
-		    <groupId>org.junit.jupiter</groupId>
-		    <artifactId>junit-jupiter-api</artifactId>
-		    <version>5.9.3</version>
+		    <groupId>junit</groupId>
+		    <artifactId>junit</artifactId>
+		    <version>4.11</version>
 		    <scope>test</scope>
 		</dependency>
 
@@ -36,6 +36,21 @@
 		    <version>5.3.1</version>
 		    <scope>test</scope>
 		</dependency>
+		
+		<!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-chrome-driver -->
+		<dependency>
+		    <groupId>org.seleniumhq.selenium</groupId>
+		    <artifactId>selenium-chrome-driver</artifactId>
+		    <version>3.141.59</version>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-api -->
+		<dependency>
+		    <groupId>org.seleniumhq.selenium</groupId>
+		    <artifactId>selenium-support</artifactId>
+		    <version>3.141.59</version>
+		</dependency>
+
     </dependencies>
 
     <build>
